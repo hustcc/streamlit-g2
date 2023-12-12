@@ -1,12 +1,12 @@
 <h1 align="center">
-  <b>Streamlit G2</b>
+  <b>streamlit G2</b>
 </h1>
 
 <div align="center">
 
-G2 is a visualization grammar for dashboard building, data exploration and storytelling.
+[G2](https://github./com/antvis/G2) is a visualization grammar for dashboard building, data exploration and storytelling.
 
-This project was created to allow render [G2](https://github./com/antvis/G2) charts in streamlit.
+This project was created to allow us to render [G2](https://github./com/antvis/G2) charts in streamlit.
 
 ![examples](https://mdn.alipayobjects.com/huamei_qa8qxu/afts/img/A*_GfqQoRCqQkAAAAAAAAAAAAADmJ7AQ/fmt.webp)
 
@@ -56,7 +56,7 @@ g2(options=options, style={"width": "100%", "height": "300px"}, key="streamlit_g
 
 ## API
 
-Now, only one API of `streamlit-g2`, named `g2`, see the `options` in [G2 Spec API](https://g2.antv.antgroup.com/manual/core/api).
+Now, There is only one API for `streamlit-g2`, named `g2`, see the `options` in [G2 Spec API](https://g2.antv.antgroup.com/manual/core/api).
 
 | Property | Description                                                                                                     | Type                  | Default |
 | -------- | --------------------------------------------------------------------------------------------------------------- | --------------------- | ------- |

@@ -18,6 +18,9 @@ def g2(options, style, key=None):
     component_value = _component_func(options=options, style=style, key=key)
     return component_value
 
+def st_g2(options, style, key=None):
+    return g2(options, style, key=key)
+
 
 # Add some test code to play with the component while it's in development.
 # During development, we can run this just as we would any other Streamlit
@@ -37,9 +40,8 @@ if not _RELEASE:
         "encoding": {
             "x": "genre",
             "y": "sold",
+            "color": "genre",
         }
     }
     
-    g2(
-        options=options, style={"width": "100%", "height": "300px"}, key="streamlit_g2"
-    )
+    g2(options=options, style={"width": "100%", "height": "300px"}, key="streamlit_g2")
