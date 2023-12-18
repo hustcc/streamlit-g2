@@ -14,11 +14,11 @@ else:
     build_dir = os.path.join(parent_dir, "frontend/build")
     _component_func = components.declare_component(NAME, path=build_dir)
 
-def g2(options, style, key=None):
+def g2(options, style=None, key=None):
     component_value = _component_func(options=options, style=style, key=key)
     return component_value
 
-def st_g2(options, style, key=None):
+def st_g2(options, style=None, key=None):
     return g2(options, style, key=key)
 
 
@@ -29,6 +29,8 @@ if not _RELEASE:
     import streamlit as st
 
     options = {
+        "autoFit": True,
+        "theme": "dark",
         "type": "interval",
         "data": [
             { "genre": 'Sports', "sold": 275 },
@@ -37,11 +39,11 @@ if not _RELEASE:
             { "genre": 'Shooter', "sold": 350 },
             { "genre": 'Other', "sold": 150 },
         ],
-        "encoding": {
+        "encode": {
             "x": "genre",
             "y": "sold",
             "color": "genre",
         }
     }
     
-    g2(options=options, style={"width": "100%", "height": "300px"}, key="streamlit_g2")
+    g2(options=options, style=None, key="streamlit_g2")

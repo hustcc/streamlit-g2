@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name="streamlit-g2",
-    version="0.0.4",
+    version="0.0.6",
     author="hustcc",
     author_email="i@hust.cc",
     description="Render G2 charts in Streamlit",
