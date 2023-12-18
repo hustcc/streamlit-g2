@@ -10,6 +10,7 @@ This project was created to allow us to render [G2](https://github./com/antvis/G
 
 ![examples](https://mdn.alipayobjects.com/huamei_qa8qxu/afts/img/A*_GfqQoRCqQkAAAAAAAAAAAAADmJ7AQ/fmt.webp)
 
+[![PyPI version](https://badge.fury.io/py/streamlit-g2.svg)](https://badge.fury.io/py/streamlit-g2)
 [![Build Status](https://github.com/antvis/g2/workflows/build/badge.svg?branch=v5)](https://github.com/antvis//actions)
 [![Coverage Status](https://img.shields.io/coveralls/github/antvis/g2/v5.svg)](https://coveralls.io/github/antvis/g2?branch=v5)
 [![npm Version](https://img.shields.io/npm/v/@antv/g2.svg)](https://www.npmjs.com/package/@antv/g2)
@@ -41,14 +42,14 @@ options = {
         { "genre": 'Shooter', "sold": 350 },
         { "genre": 'Other', "sold": 150 },
     ],
-    "encoding": {
+    "encode": {
         "x": "genre",
         "y": "sold",
         "color": "genre",
     }
 }
 
-g2(options=options, style={"width": "100%", "height": "300px"}, key="streamlit_g2")
+g2(options=options, style=None, key="streamlit_g2")
 ```
 
 <img src="https://mdn.alipayobjects.com/huamei_qa8qxu/afts/img/A*XqCnTbkpAkQAAAAAAAAAAAAADmJ7AQ/fmt.webp" width="640" alt="example">
@@ -62,6 +63,12 @@ Now, There is only one API for `streamlit-g2`, named `g2`, see the `options` in 
 | -------- | --------------------------------------------------------------------------------------------------------------- | --------------------- | ------- |
 | options  | the [options](https://g2.antv.antgroup.com/manual/core/api) for the visualization, say `chart.options(options)` | `G2options` \| `null` | -       |
 | style    | the style of the container                                                                                      | `CSSProperties`       | -       |
+
+
+## Development
+
+- Build frontend code by running `npm run build` in fold `streamlit_g2/frontend`.
+- Run the example by running `streamlit run app.py` in root dir.
 
 
 ## License
