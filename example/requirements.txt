@@ -1,0 +1,2 @@
+streamlit
+streamlit-g2==0.0.6
