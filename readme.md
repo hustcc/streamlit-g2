@@ -1,5 +1,5 @@
 <h1 align="center">
-  <b>streamlit G2</b>
+  <b>Streamlit G2</b>
 </h1>
 
 <div align="center">
@@ -67,8 +67,8 @@ Now, There is only one API for `streamlit-g2`, named `g2`, see the `options` in 
 
 ## Development
 
-- Build frontend code by running `npm run build` in fold `streamlit_g2/frontend`.
-- Run the example by running `streamlit run app.py` in root dir.
+- Building frontend code by running `npm run start` in fold `streamlit_g2/frontend`.
+- Run the example by running `streamlit run streamlit_g2/__init__.py` with `_RELEASE = False`.
 
 
 ## License
