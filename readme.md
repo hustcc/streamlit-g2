@@ -6,7 +6,7 @@
 
 [G2](https://github.com/antvis/G2) is a visualization grammar for dashboard building, data exploration and storytelling.
 
-This project was created to allow us to render [G2](https://github.com/antvis/G2) charts in streamlit.
+This project was created to allow us to render [G2](https://github.com/antvis/G2) charts in streamlit. [Live Demo](https://antv-g2.streamlit.app/).
 
 ![examples](https://mdn.alipayobjects.com/huamei_qa8qxu/afts/img/A*_GfqQoRCqQkAAAAAAAAAAAAADmJ7AQ/fmt.webp)
 
