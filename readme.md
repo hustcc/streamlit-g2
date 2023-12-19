@@ -1,5 +1,5 @@
 <h1 align="center">
-  <b>streamlit G2</b>
+  <b>Streamlit G2</b>
 </h1>
 
 <div align="center">
