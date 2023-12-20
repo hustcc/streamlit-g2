@@ -12,7 +12,6 @@ This project was created to allow us to render [G2](https://github.com/antvis/G2
 """
 
 """
-----
 ## Bar Chart
 """
 
@@ -36,7 +35,8 @@ options = {
 
 g2(options=options)
 
-"""
+source = st.expander("Source Code")
+source.markdown("""
 ```py
 import streamlit as st
 from streamlit_g2 import g2
@@ -61,10 +61,11 @@ options = {
 
 g2(options=options)
 ```
-"""
+""")
+
+
 
 """
-----
 ## Column Chart
 """
 
@@ -93,7 +94,8 @@ options = {
 
 g2(options=options)
 
-"""
+source = st.expander("Source Code")
+source.markdown("""
 ```py
 import streamlit as st
 from streamlit_g2 import g2
@@ -123,11 +125,11 @@ options = {
 
 g2(options=options)
 ```
-"""
+""")
 
 
+
 """
-----
 ## Line Chart
 """
 
@@ -147,7 +149,8 @@ options = {
 
 g2(options=options)
 
-"""
+source = st.expander("Source Code")
+source.markdown("""
 ```py
 import streamlit as st
 from streamlit_g2 import g2
@@ -168,11 +171,11 @@ options = {
 
 g2(options=options)
 ```
-"""
+""")
 
 
+
 """
-----
 ## Area Chart
 """
 
@@ -192,7 +195,8 @@ options = {
 
 g2(options=options)
 
-"""
+source = st.expander("Source Code")
+source.markdown("""
 ```py
 import streamlit as st
 from streamlit_g2 import g2
@@ -213,15 +217,17 @@ options = {
 
 g2(options=options)
 ```
-"""
+""")
 
 
+
 """
-----
 ## Pie Chart
 """
 
 options = {
+    "autoFit": True,
+    "theme": "dark",
     "type": "interval",
     "coordinate": {
         "type": "theta"
@@ -262,7 +268,8 @@ options = {
 
 g2(options=options)
 
-"""
+source = st.expander("Source Code")
+source.markdown("""
 ```py
 import streamlit as st
 from streamlit_g2 import g2
@@ -308,12 +315,11 @@ options = {
 
 g2(options=options)
 ```
-"""
+""")
 
 
 
 """
-----
 ## DualAxes Chart
 """
 
@@ -475,7 +481,8 @@ options = {
 
 g2(options=options)
 
-"""
+source = st.expander("Source Code")
+source.markdown("""
 ```py
 import streamlit as st
 from streamlit_g2 import g2
@@ -638,11 +645,11 @@ options = {
 
 g2(options=options)
 ```
-"""
+""")
 
 
+
 """
-----
 ## Scatter Chart
 """
 
@@ -664,7 +671,8 @@ options = {
 
 g2(options=options)
 
-"""
+source = st.expander("Source Code")
+source.markdown("""
 ```py
 import streamlit as st
 from streamlit_g2 import g2
@@ -687,12 +695,11 @@ options = {
 
 g2(options=options)
 ```
-"""
+""")
 
 
 
 """
-----
 ## Liquid Chart
 """
 
@@ -712,7 +719,8 @@ options = {
 
 g2(options=options)
 
-"""
+source = st.expander("Source Code")
+source.markdown("""
 ```py
 import streamlit as st
 from streamlit_g2 import g2
@@ -733,12 +741,11 @@ options = {
 
 g2(options=options)
 ```
-"""
+""")
 
 
 
 """
-----
 ## Ring Chart
 """
 
@@ -810,7 +817,8 @@ options = {
 
 g2(options=options)
 
-"""
+source = st.expander("Source Code")
+source.markdown("""
 ```py
 import streamlit as st
 from streamlit_g2 import g2
@@ -883,11 +891,11 @@ options = {
 
 g2(options=options)
 ```
-"""
+""")
 
 
+
 """
-----
 ## Boxplot
 """
 
@@ -914,7 +922,8 @@ options = {
 
 g2(options=options)
 
-"""
+source = st.expander("Source Code")
+source.markdown("""
 ```py
 import streamlit as st
 from streamlit_g2 import g2
@@ -942,12 +951,11 @@ options = {
 
 g2(options=options)
 ```
-"""
+""")
 
 
 
 """
-----
 ## Funnel Chart
 """
 
@@ -1002,7 +1010,8 @@ options = {
 
 g2(options=options)
 
-"""
+source = st.expander("Source Code")
+source.markdown("""
 ```py
 import streamlit as st
 from streamlit_g2 import g2
@@ -1058,12 +1067,11 @@ options = {
 
 g2(options=options)
 ```
-"""
+""")
 
 
 
 """
-----
 ## Histogram
 """
 
@@ -1096,7 +1104,8 @@ options = {
 
 g2(options=options)
 
-"""
+source = st.expander("Source Code")
+source.markdown("""
 ```py
 import streamlit as st
 from streamlit_g2 import g2
@@ -1130,4 +1139,4 @@ options = {
 
 g2(options=options)
 ```
-"""
+""")
