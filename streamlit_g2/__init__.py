@@ -83,7 +83,6 @@ if not _RELEASE:
 
     options = {
         "autoFit": True,
-        "theme": "dark",
         "type": "interval",
         "data": [
             { "genre": "Sports", "sold": 275 },
