@@ -59,6 +59,7 @@ setup(
     python_requires=">=3.6",
     install_requires=[
         "streamlit >= 0.63",
+        "pandas>=1.0.0",
     ],
     cmdclass={"upload": UploadCommand},
 )
