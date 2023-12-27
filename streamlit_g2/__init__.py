@@ -1,5 +1,6 @@
 import os
 import streamlit.components.v1 as components
+import spec
 
 # Create a _RELEASE constant. We'll set this to False while we're developing
 # the component, and True when we're ready to package and distribute it.
@@ -66,6 +67,8 @@ def g2(options, style=None, key=None):
     #
     # "default" is a special argument that specifies the initial return
     # value of the component before the user has interacted with it.
+    # Loop to change pd.DataFrame to JSON Object.
+    spec.normalize_options(options)
     component_value = _component_func(options=options, style=style, key=key)
     return component_value
 
@@ -80,22 +83,45 @@ def st_g2(options, style=None, key=None):
 # `$ streamlit run streamlit_g2/__init__.py`
 if not _RELEASE:
     import streamlit as st
+    import pandas as pd
+
+    df = pd.DataFrame(
+        [["Sports", 275], ["Strategy", 115], ["Action", 120], ["Shooter", 350], ["Other", 150]],
+        columns=["genre", "sold"],
+    )
 
     options = {
         "autoFit": True,
-        "type": "interval",
-        "data": [
-            { "genre": "Sports", "sold": 275 },
-            { "genre": "Strategy", "sold": 115 },
-            { "genre": "Action", "sold": 120 },
-            { "genre": "Shooter", "sold": 350 },
-            { "genre": "Other", "sold": 150 },
-        ],
-        "encode": {
-            "x": "genre",
-            "y": "sold",
-            "color": "genre",
-        }
+        "type": "spaceFlex",
+        "children": [
+            {
+                "type": "interval",
+                "data": [
+                    { "genre": "Sports", "sold": 275 },
+                    { "genre": "Strategy", "sold": 115 },
+                    { "genre": "Action", "sold": 120 },
+                    { "genre": "Shooter", "sold": 350 },
+                    { "genre": "Other", "sold": 150 },
+                ],
+                "encode": {
+                    "x": "genre",
+                    "y": "sold",
+                    "color": "genre",
+                },
+            },
+            {
+                "type": "line",
+                "data": df,
+                "encode": {
+                    "x": "genre",
+                    "y": "sold",
+                    "shape": "smooth"
+                },
+                "style": {
+                    "lineWidth": 2,
+                }
+            }
+        ]
     }
 
     g2(options=options, style={ "height": "400px" }, key="streamlit-g2")
