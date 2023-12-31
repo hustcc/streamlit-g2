@@ -60,6 +60,7 @@ setup(
     install_requires=[
         "streamlit >= 0.63",
         "pandas>=1.0.0",
+        "simplejson"
     ],
     cmdclass={"upload": UploadCommand},
 )

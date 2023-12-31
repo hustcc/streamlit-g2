@@ -1,13 +1,13 @@
 import os
 import streamlit.components.v1 as components
-import spec
+from spec import JS, json_dump_options
 
 # Create a _RELEASE constant. We'll set this to False while we're developing
 # the component, and True when we're ready to package and distribute it.
 # (This is, of course, optional - there are innumerable ways to manage your
 # release process.)
 # Set _RELEASE = False to debug.
-_RELEASE = True
+_RELEASE = False
 
 # Declare a Streamlit component. `declare_component` returns a function
 # that is used to create instances of the component. We're naming this
@@ -68,8 +68,8 @@ def g2(options, style=None, key=None):
     # "default" is a special argument that specifies the initial return
     # value of the component before the user has interacted with it.
     # Loop to change pd.DataFrame to JSON Object.
-    spec.normalize_options(options)
-    component_value = _component_func(options=options, style=style, key=key)
+    o = json_dump_options(options)
+    component_value = _component_func(options=o, style=style, key=key)
     return component_value
 
 def st_g2(options, style=None, key=None):
@@ -106,8 +106,11 @@ if not _RELEASE:
                 "encode": {
                     "x": "genre",
                     "y": "sold",
-                    "color": "genre",
+                    "color": JS('''(d) => d.sold > 200 ? "red" : "green"'''),
                 },
+                "scale": {
+                    "color": { "type": "identity" }
+                }
             },
             {
                 "type": "line",
