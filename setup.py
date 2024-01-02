@@ -45,12 +45,12 @@ def read(*names, **kwargs):
 
 setup(
     name="streamlit-g2",
-    version="0.1.0",
+    version="0.1.1",
     author="hustcc",
     author_email="i@hust.cc",
     description="Render G2 charts in Streamlit",
     long_description=read('readme.md'),
-    long_description_content_type="text/plain",
+    long_description_content_type="text/markdown",
     keywords=["antv", "g2", "streamlit-component", "streamlit-g2"],
     url="https://github.com/hustcc/streamlit-g2",
     packages=find_packages(),

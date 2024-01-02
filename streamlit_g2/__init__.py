@@ -1,13 +1,13 @@
 import os
 import streamlit.components.v1 as components
-from spec import JS, json_dump_options
+from streamlit_g2.spec import JS, json_dump_options
 
 # Create a _RELEASE constant. We'll set this to False while we're developing
 # the component, and True when we're ready to package and distribute it.
 # (This is, of course, optional - there are innumerable ways to manage your
 # release process.)
 # Set _RELEASE = False to debug.
-_RELEASE = False
+_RELEASE = True
 
 # Declare a Streamlit component. `declare_component` returns a function
 # that is used to create instances of the component. We're naming this
