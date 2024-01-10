@@ -49,7 +49,7 @@ options = {
     }
 }
 
-g2(options=options, style=None, key="streamlit_g2")
+g2(options=options, style=None)
 ```
 
 <img src="https://mdn.alipayobjects.com/huamei_qa8qxu/afts/img/A*XqCnTbkpAkQAAAAAAAAAAAAADmJ7AQ/fmt.webp" width="640" alt="example">
@@ -63,6 +63,34 @@ Now, There is only one API for `streamlit-g2`, named `g2`, see the `options` in 
 | -------- | --------------------------------------------------------------------------------------------------------------- | --------------------- | ------- |
 | options  | the [options](https://g2.antv.antgroup.com/manual/core/api) for the visualization, say `chart.options(options)` | `G2options` \| `null` | -       |
 | style    | the style of the container                                                                                      | `CSSProperties`       | -       |
+
+## FAQ
+
+- How to use Javascript callback function?
+
+```py
+import streamlit as st
+from streamlit_g2 import g2, JS
+
+options = {
+    "type": "interval",
+    "data": [
+        { "genre": 'Sports', "sold": 275 },
+        { "genre": 'Strategy', "sold": 115 },
+        { "genre": 'Action', "sold": 120 },
+        { "genre": 'Shooter', "sold": 350 },
+        { "genre": 'Other', "sold": 150 },
+    ],
+    "encode": {
+        "x": "genre",
+        "y": "sold",
+        # Use Javascript function.
+        "color": JS('''(d) => d.sold > 300 ? "red" : "green"'''),
+    }
+}
+
+g2(options=option)
+```
 
 
 ## Development
