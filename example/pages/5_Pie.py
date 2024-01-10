@@ -50,8 +50,7 @@ options = {
 
 g2(options=options)
 
-source = st.expander("Source Code")
-source.markdown("""
+st.markdown("""
 ```py
 import streamlit as st
 from streamlit_g2 import g2
